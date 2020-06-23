@@ -1,0 +1,4 @@
+19:31:49.116 [main] INFO  API_Automation.Rest_Assured.GetGroups - Making call to get groups API
+19:31:49.131 [main] INFO  API_Automation.Rest_Assured.GetGroups_Test - Inside GetGroups_Test
+19:31:53.351 [main] INFO  com.utility.DataBaseHelper - Executing Query select id,name from store_group where id in( select store_group_id FROM user_has_store_group where user_id=(select id from user where email='adarsh.jayanna@costrategix.com'))and delete_flag=0;
+19:31:53.629 [main] INFO  com.utility.DataBaseHelper - Query executed successfully

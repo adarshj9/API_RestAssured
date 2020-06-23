@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="7" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="12478" started-at="2020-06-10T11:46:54 IST" finished-at="2020-06-10T11:47:06 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="12478" started-at="2020-06-10T11:46:54 IST" finished-at="2020-06-10T11:47:06 IST">
+      <class name="API_Automation.Rest_Assured.StatusChange_Test">
+        <test-method status="PASS" signature="validateChangeStatus()[pri:0, instance:API_Automation.Rest_Assured.StatusChange_Test@bcec361]" name="validateChangeStatus" duration-ms="0" started-at="2020-06-10T11:47:02 IST" finished-at="2020-06-10T11:47:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateChangeStatus -->
+      </class> <!-- API_Automation.Rest_Assured.StatusChange_Test -->
+      <class name="API_Automation.Rest_Assured.GetGroups_Test">
+        <test-method status="PASS" signature="getGroups()[pri:0, instance:API_Automation.Rest_Assured.GetGroups_Test@26794848]" name="getGroups" duration-ms="4246" started-at="2020-06-10T11:47:02 IST" finished-at="2020-06-10T11:47:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getGroups -->
+      </class> <!-- API_Automation.Rest_Assured.GetGroups_Test -->
+      <class name="API_Automation.Rest_Assured.GetProfile_Test">
+        <test-method status="PASS" signature="getTOken()[pri:0, instance:API_Automation.Rest_Assured.GetProfile_Test@4b2bac3f]" name="getTOken" is-config="true" duration-ms="3353" started-at="2020-06-10T11:46:54 IST" finished-at="2020-06-10T11:46:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTOken -->
+        <test-method status="PASS" signature="valideteGetProfile()[pri:0, instance:API_Automation.Rest_Assured.GetProfile_Test@4b2bac3f]" name="valideteGetProfile" duration-ms="4842" started-at="2020-06-10T11:46:57 IST" finished-at="2020-06-10T11:47:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- valideteGetProfile -->
+      </class> <!-- API_Automation.Rest_Assured.GetProfile_Test -->
+      <class name="API_Automation.Rest_Assured.AppTest">
+        <test-method status="PASS" signature="test()[pri:0, instance:API_Automation.Rest_Assured.AppTest@4e08711f]" name="test" duration-ms="0" started-at="2020-06-10T11:47:02 IST" finished-at="2020-06-10T11:47:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- API_Automation.Rest_Assured.AppTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
