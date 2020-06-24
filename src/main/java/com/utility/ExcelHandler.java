@@ -9,9 +9,12 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVPrinter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -19,6 +22,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelHandler extends BaseTest {
+	private static Logger log = LogManager.getLogger(ExcelHandler.class.getName());
 	CSVPrinter csvPrinter;
 
 	public String getExcelData(String sheetName, int rowNum, int cellNum) {
@@ -69,6 +73,7 @@ public class ExcelHandler extends BaseTest {
 	public CSVParser readCSV(String file_name) {
 
 		try {
+			log.info("Creating a CSV file with name " + file_name);
 			Reader reader = Files.newBufferedReader(Paths.get("./src/main/java/resources/" + file_name + ".csv"));
 			CSVParser csvParser = new CSVParser(reader,
 					CSVFormat.DEFAULT.withFirstRecordAsHeader().withIgnoreHeaderCase().withTrim());
@@ -114,6 +119,7 @@ public class ExcelHandler extends BaseTest {
 
 	public void flushData() {
 		try {
+			log.info("Saving data to CSV");
 			csvPrinter.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

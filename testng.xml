@@ -7,6 +7,8 @@
       <class name="API_Automation.Rest_Assured.AppTest"/>
       <class name="API_Automation.Rest_Assured.StatusChange_Test"/>
       <class name="API_Automation.Rest_Assured.GetGroups_Test"/>
+      <class name="API_Automation.Rest_Assured.GetUSers_Test"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

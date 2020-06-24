@@ -3,6 +3,7 @@ package API_Automation.Rest_Assured;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.lessThan;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,13 +17,15 @@ public class GetProfile_Test extends BaseTest {
 
 	GetProfile gp = new GetProfile();
 
-	@Test
+	@Test(description="Validate Profile API response : active flag, first name, last name, roles")
 	public void valideteGetProfile() {
+		System.out.println("Inside "+this.getClass().getSimpleName());
 
 		Response profileAPI = gp.getProfileAPI();
 		ResultSet profileDB = gp.getProfileDB();
 		log.info("Inside " + this.getClass().getSimpleName());
-		profileAPI.then().assertThat().statusCode(200).body("status", equalTo("Success"));
+		profileAPI.then().assertThat().statusCode(200).and().body("status", equalTo("Success")).and()
+		.time(lessThan(3000L));
 		JsonPath jp = new JsonPath(profileAPI.asString());
 		try {
 			while (profileDB.next()) {
@@ -52,6 +55,7 @@ public class GetProfile_Test extends BaseTest {
 			log.error("Looping through the resultset in " + this.getClass().getSimpleName());
 			e.printStackTrace();
 		}
+		log.info("Exeuction of " + this.getClass().getSimpleName()+" completed");
 
 	}
 

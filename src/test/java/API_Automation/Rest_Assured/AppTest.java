@@ -26,6 +26,7 @@ public class AppTest extends BaseTest {
 	@Test
 	public  void test() throws SQLException 
 	{
+		System.out.println("Inside "+this.getClass().getSimpleName());
 		/*ExcelHandler ex = new ExcelHandler();
 		Map map=new HashMap();  
 	    //Adding elements to map  
@@ -48,12 +49,10 @@ public class AppTest extends BaseTest {
 		  
 	    ex.flushData();*/
 		
-		ExcelHandler e = new ExcelHandler();
-		CSVParser readCSV = e.readCSV("get_users");
-		for (CSVRecord csvRecord : readCSV) {
-			 System.out.println(csvRecord.get("email"));
-			  System.out.println(csvRecord.get("id")); }
-			 
+		
+		String s="{\"email\":\""+prop_reader.getProperty("username")+"\",\"password\":\""+prop_reader.getProperty("password")+"\"}";
+		prop_reader.getProperty("username");
+		System.out.println(s);
 	  
 		
 	

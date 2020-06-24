@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import static org.hamcrest.Matchers.lessThan;
 
 import com.utility.BaseTest;
 
@@ -21,13 +22,14 @@ public class GetGroups_Test extends BaseTest {
 
 	GetGroups gp = new GetGroups();
 
-	@Test
+	@Test(description="validating divisions, status code and time")
 	public void getGroups() {
 		Response groupsAPI = gp.getGroupsAPI();
 		log.info("Inside " + this.getClass().getSimpleName());
+		System.out.println("Inside "+this.getClass().getSimpleName());
 
 		// Check status code
-		groupsAPI.then().assertThat().statusCode(200);
+		groupsAPI.then().assertThat().statusCode(200).and().time(lessThan(3000L));
 
 		// creating the API response to JSON path
 		JsonPath jp = new JsonPath(groupsAPI.asString());
@@ -52,6 +54,7 @@ public class GetGroups_Test extends BaseTest {
 
 		// Comparing the store groups got from API response and the Data Base
 		Assert.assertEquals(actual_store_group, expected_store_groups);
+		log.info("Exeuction of " + this.getClass().getSimpleName()+" completed");
 	}
 
 }

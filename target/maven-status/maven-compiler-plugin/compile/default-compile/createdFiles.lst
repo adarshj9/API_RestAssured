@@ -2,6 +2,8 @@ API_Automation\Rest_Assured\GetProfile.class
 API_Automation\Rest_Assured\App.class
 API_Automation\Rest_Assured\GetGroups.class
 com\utility\DataBaseHelper.class
+com\utility\ExcelHandler.class
 com\utility\PropertyFileReader.class
 com\utility\BaseTest.class
 API_Automation\Rest_Assured\ChangeStatus.class
+API_Automation\Rest_Assured\GetUsers.class

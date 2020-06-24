@@ -26,7 +26,7 @@ public class BaseTest {
 		// Set base URL
 		RestAssured.baseURI = prop_reader.getProperty("base_url");
 		Response response = given().header("Content-Type", "application/json")
-				.body("{\"email\":\"adarsh.jayanna@costrategix.com\",\"password\":\"12345\"}").when()
+				.body("{\"email\":\""+prop_reader.getProperty("username")+"\",\"password\":\""+prop_reader.getProperty("password")+"\"}").when()
 				.post(prop_reader.getProperty("authorize"));
 		JsonPath jp = new JsonPath(response.asString());
 		accesstoken = jp.get("accessToken");

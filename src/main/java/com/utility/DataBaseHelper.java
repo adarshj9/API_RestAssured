@@ -20,6 +20,7 @@ public class DataBaseHelper extends BaseTest {
 		// This method will execute the query and return the result set
 		try {
 			// Connect to DB
+			log.info("Making connection to DB");
 			Connection connection = DriverManager.getConnection(prop_reader.getProperty("dburl"),
 					prop_reader.getProperty("dbusername"), prop_reader.getProperty("dbpassword"));
 

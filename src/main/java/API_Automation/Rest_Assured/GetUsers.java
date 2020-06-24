@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -19,9 +21,11 @@ import com.utility.ExcelHandler;
 import io.restassured.response.Response;
 
 public class GetUsers extends BaseTest {
+	private static Logger log = LogManager.getLogger(GetUsers.class.getName());
 
 	public Response getUsersAPI() {
 
+		log.info("Making call to GetUSers API");
 		return given().header("Content-Type", "application/json").header("Authorization", "Bearer " + accesstoken)
 				.when().get(prop_reader.getProperty("users"));
 
@@ -36,11 +40,12 @@ public class GetUsers extends BaseTest {
 		// System.out.println("Object: " + object);
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			List<Map> map = mapper.readValue(object.toString(), List.class);
-			ex.createCSV("get_users", map.get(0));
-			map.forEach(data -> {
-				ex.setRows(data);
-			});
+			List<Map> map_data = mapper.readValue(object.toString(), List.class);
+			ex.createCSV("get_users", map_data.get(0));
+			for (Map map : map_data) {
+				ex.setRows(map);
+				
+			}
 			ex.flushData();
 
 		} catch (JsonParseException e) {

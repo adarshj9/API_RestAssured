@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5447" started-at="2020-06-23T14:02:30Z" finished-at="2020-06-23T14:02:35Z">
+  <suite name="Default suite" duration-ms="3063" started-at="2020-06-24T13:18:47Z" finished-at="2020-06-24T13:18:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5447" started-at="2020-06-23T14:02:30Z" finished-at="2020-06-23T14:02:35Z">
-      <class name="API_Automation.Rest_Assured.GetUSers_Test">
-        <test-method status="PASS" signature="getTOken()[pri:0, instance:API_Automation.Rest_Assured.GetUSers_Test@2df3b89c]" name="getTOken" is-config="true" duration-ms="3691" started-at="2020-06-23T19:32:30Z" finished-at="2020-06-23T19:32:33Z">
+    <test name="Default test" duration-ms="3063" started-at="2020-06-24T13:18:47Z" finished-at="2020-06-24T13:18:50Z">
+      <class name="API_Automation.Rest_Assured.AppTest">
+        <test-method status="PASS" signature="getTOken()[pri:0, instance:API_Automation.Rest_Assured.AppTest@2df3b89c]" name="getTOken" is-config="true" duration-ms="3047" started-at="2020-06-24T18:48:47Z" finished-at="2020-06-24T18:48:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTOken -->
-        <test-method status="PASS" signature="validateGetUser()[pri:0, instance:API_Automation.Rest_Assured.GetUSers_Test@2df3b89c]" name="validateGetUser" duration-ms="1736" started-at="2020-06-23T19:32:33Z" finished-at="2020-06-23T19:32:35Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:API_Automation.Rest_Assured.AppTest@2df3b89c]" name="test" duration-ms="5" started-at="2020-06-24T18:48:50Z" finished-at="2020-06-24T18:48:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateGetUser -->
-      </class> <!-- API_Automation.Rest_Assured.GetUSers_Test -->
+        </test-method> <!-- test -->
+      </class> <!-- API_Automation.Rest_Assured.AppTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

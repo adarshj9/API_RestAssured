@@ -1,0 +1,35 @@
+deleteFlag,firstName,lastName,termsAccept,firstLogin,distributorId,roleName,tenantId,active,id,email
+false,Admin,J. Parker,false,false,0,accounting_team,0,true,15,jparker@fintech.com
+false,Admin,J. Yara,false,false,0,category_manager,0,true,6,jeevan.yara@costrategix.com
+false,Admin,James,false,false,0,category_manager,0,true,27,james.ball@admin.com
+false,Admin,Nelms,false,false,0,category_manager,0,true,52,bnelms@fintech.com
+false,Admin,Whitney,false,false,0,price_team,0,true,26,whitney.risner@admin.com
+false,Admin,B. Weech,false,false,0,price_team,0,true,28,bryce@armadilloinsight.com
+false,Alysha,Calender,false,false,0,price_team,0,true,44,acalender@circlek.com
+false,Amanda,Chaplin,false,false,0,price_team,0,true,38,ajchaplin@circlek.com
+false,Anthony,Franklin,false,false,0,category_manager,0,true,30,afranklin5@circlek.com
+false,Ashton,White,false,false,0,price_team,0,true,35,arwhite@circlek.com
+false,Bob,Gulley,false,false,0,category_manager,0,true,43,bgulley@circlek.com
+false,Caleb,Streeval,false,false,0,price_team,0,true,19,cstreeval1@CircleK.com
+false,Circle K,IT,false,false,0,category_manager,0,true,51,todd.sherinian@circlek.com
+false,Eric,Evans,false,false,0,accounting_team,0,true,50,eevans@circlek.com
+false,Erik,Miel,false,false,0,category_manager,0,true,42,emiel@circlek.com
+false,Harvey,Collins,false,false,0,category_manager,0,true,41,hcollins@circlek.com
+false,Heather,Fillenworth,false,false,0,category_manager,0,true,31,hfillenworth@circlek.com
+false,Josie,Claycamp,false,false,0,price_team,0,true,20,jmclaycamp@circlek.com
+false,Julie,Farmer,false,false,0,category_manager,0,true,36,jfarmer1@circlek.com
+false,Krista,Beal,false,false,0,price_team,0,true,24,kbeal@circlek.com
+false,Kristen,Jones,false,false,0,price_team,0,true,45,kajones@circlek.com
+false,Leigh,Munoz,false,false,0,accounting_team,0,true,48,lmunoz@circlek.com
+false,Mark,Wiese,false,false,0,accounting_team,0,true,49,mwiese@circlek.com
+false,Mark,Wright,false,false,0,category_manager,0,true,32,mwright@circlek.com
+false,Natalie,Riddle,false,false,0,price_team,0,true,21,nriddle@circlek.com
+false,Nick,Meyer,false,false,0,category_manager,0,true,34,nick.meyer@circlek.com
+false,Penny,Hoskins,false,false,0,price_team,0,true,46,phoskins@circlek.com
+false,Ray,Feeler,false,false,0,category_manager,0,true,33,rfeeler@circlek.com
+false,Samantha,Lockard,false,false,0,price_team,0,true,22,smccarter@Circlek.com
+false,Sean,Hickox,false,false,0,category_manager,0,true,37,sean.hickox@circlek.com
+false,Sondra,Wilhite,false,false,0,category_manager,0,true,39,swilhite@circlek.com
+false,Stone,Riddle,false,false,0,price_team,0,true,40,sriddle@circlek.com
+false,Tina,Russell,false,false,0,price_team,0,true,47,trussell@circlek.com
+false,Tonya,Hill,false,false,0,category_manager,0,true,23,thill@circlek.com

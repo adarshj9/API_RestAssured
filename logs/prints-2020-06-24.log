@@ -1,0 +1,6 @@
+19:22:16.595 [main] INFO  API_Automation.Rest_Assured.GetGroups_Test - Exeuction of GetGroups_Test completed
+19:22:16.600 [main] INFO  API_Automation.Rest_Assured.GetUSers_Test - Inside GetUSers_Test
+19:22:16.600 [main] INFO  API_Automation.Rest_Assured.GetUsers - Making call to GetUSers API
+19:22:16.603 [main] INFO  com.utility.PropertyFileReader - Reading property users
+19:22:18.328 [main] INFO  com.utility.ExcelHandler - Saving data to CSV
+19:22:18.340 [main] INFO  com.utility.ExcelHandler - Creating a CSV file with name get_users
