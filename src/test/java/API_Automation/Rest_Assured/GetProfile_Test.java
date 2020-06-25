@@ -7,31 +7,68 @@ import static org.hamcrest.Matchers.lessThan;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.utility.BaseTest;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class GetProfile_Test extends BaseTest {
+public class GetProfile_Test extends GetProfile {
 	private static Logger log = LogManager.getLogger(GetProfile.class.getName());
 
 	GetProfile gp = new GetProfile();
+	Response profileAPI;
+	ResultSet profileDB;
+	JsonPath jp;
 
-	@Test(description="Validate Profile API response : active flag, first name, last name, roles")
+	@Test(priority = 0, groups = "GetProfileValidations", description = "Validate Profile API status code")
 	public void valideteGetProfile() {
-		System.out.println("Inside "+this.getClass().getSimpleName());
+		System.out.println("Inside " + this.getClass().getSimpleName());
 
-		Response profileAPI = gp.getProfileAPI();
-		ResultSet profileDB = gp.getProfileDB();
+		profileAPI = gp.getProfileAPI();
+		profileDB = gp.getProfileDB();
 		log.info("Inside " + this.getClass().getSimpleName());
-		profileAPI.then().assertThat().statusCode(200).and().body("status", equalTo("Success")).and()
-		.time(lessThan(3000L));
-		JsonPath jp = new JsonPath(profileAPI.asString());
+		profileAPI.then().assertThat().statusCode(200).and().body("status", equalTo("Success"));
+		jp = new JsonPath(profileAPI.asString());
+		log.info("Exeuction of " + this.getClass().getSimpleName() + " completed");
+
+	}
+
+	@Test(priority = 1, groups = "GetProfileValidations", description = "Validate user role")
+	public void validateRole() {
 		try {
 			while (profileDB.next()) {
-				// validate email
-				profileAPI.then().assertThat().body("data.email", equalTo(profileDB.getString("email")));
-				// validate active_flag
+				// Validate role
+				profileAPI.then().assertThat().body("data.userRoles.roleId.role[0]",
+						equalTo(profileDB.getString("name")));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@Test(priority = 2, groups = "GetProfileValidations", description = "Validate first name and last name")
+	public void validateFirstAndLastName() {
+		try {
+			while (profileDB.next()) {
+				// Validate first and last name
+				profileAPI.then().assertThat().body("data.firstName", equalTo(profileDB.getString("first_name")));
+				profileAPI.then().assertThat().body("data.lastName", equalTo(profileDB.getString("last_name")));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@Test(priority = 3, groups = "GetProfileValidations", description = "Validate Active flag")
+	public void validateActiveFlag() {
+		try {
+			while (profileDB.next()) {
 				if (profileDB.getString("active_flag") == "1") {
 					profileAPI.then().assertThat().body("data.active", equalTo("true"));
 
@@ -41,21 +78,31 @@ public class GetProfile_Test extends BaseTest {
 
 				}
 
-				// Validate first and last name
-				profileAPI.then().assertThat().body("data.firstName", equalTo(profileDB.getString("first_name")));
-				profileAPI.then().assertThat().body("data.lastName", equalTo(profileDB.getString("last_name")));
-
-				// Validate role
-				profileAPI.then().assertThat().body("data.userRoles.roleId.role[0]",
-						equalTo(profileDB.getString("name")));
-
 			}
-
 		} catch (SQLException e) {
-			log.error("Looping through the resultset in " + this.getClass().getSimpleName());
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		log.info("Exeuction of " + this.getClass().getSimpleName()+" completed");
+
+	}
+
+	@Test(priority = 4, groups = "GetProfileValidations", description = "Validate email id")
+	public void validateEmail() {
+		try {
+			while (profileDB.next()) {
+				// validate email
+				profileAPI.then().assertThat().body("data.email", equalTo(profileDB.getString("email")));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	@Test(priority = 5, groups = "GetProfileValidations", description = "Validate get profile API response time")
+	public void validateGetProfileResponseTime() {
+		checkResponseTime(profileAPI);
 
 	}
 

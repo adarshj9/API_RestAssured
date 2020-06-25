@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import com.utility.BaseTest;
 import com.utility.DataBaseHelper;
 import com.utility.ExcelHandler;
+import com.utility.JSONHandler;
 import com.utility.PropertyFileReader;
 
 import io.restassured.path.json.JsonPath;
@@ -50,9 +51,8 @@ public class AppTest extends BaseTest {
 	    ex.flushData();*/
 		
 		
-		String s="{\"email\":\""+prop_reader.getProperty("username")+"\",\"password\":\""+prop_reader.getProperty("password")+"\"}";
-		prop_reader.getProperty("username");
-		System.out.println(s);
+		JSONHandler j = new JSONHandler();
+		j.readJSON("change_status");
 	  
 		
 	

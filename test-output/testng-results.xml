@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3063" started-at="2020-06-24T13:18:47Z" finished-at="2020-06-24T13:18:50Z">
+  <suite name="Default suite" duration-ms="16507" started-at="2020-06-25T08:42:41Z" finished-at="2020-06-25T08:42:57Z">
     <groups>
+      <group name="Change Status">
+        <method signature="StatusChange_Test.validateChangeStatus()[pri:0, instance:API_Automation.Rest_Assured.StatusChange_Test@305b7c14]" name="validateChangeStatus" class="API_Automation.Rest_Assured.StatusChange_Test"/>
+        <method signature="StatusChange_Test.validateStatusResponseTime()[pri:2, instance:API_Automation.Rest_Assured.StatusChange_Test@305b7c14]" name="validateStatusResponseTime" class="API_Automation.Rest_Assured.StatusChange_Test"/>
+        <method signature="StatusChange_Test.validateVarianceId()[pri:1, instance:API_Automation.Rest_Assured.StatusChange_Test@305b7c14]" name="validateVarianceId" class="API_Automation.Rest_Assured.StatusChange_Test"/>
+      </group> <!-- Change Status -->
     </groups>
-    <test name="Default test" duration-ms="3063" started-at="2020-06-24T13:18:47Z" finished-at="2020-06-24T13:18:50Z">
-      <class name="API_Automation.Rest_Assured.AppTest">
-        <test-method status="PASS" signature="getTOken()[pri:0, instance:API_Automation.Rest_Assured.AppTest@2df3b89c]" name="getTOken" is-config="true" duration-ms="3047" started-at="2020-06-24T18:48:47Z" finished-at="2020-06-24T18:48:50Z">
+    <test name="Default test" duration-ms="16507" started-at="2020-06-25T08:42:41Z" finished-at="2020-06-25T08:42:57Z">
+      <class name="API_Automation.Rest_Assured.StatusChange_Test">
+        <test-method status="PASS" signature="getTOken()[pri:0, instance:API_Automation.Rest_Assured.StatusChange_Test@305b7c14]" name="getTOken" is-config="true" duration-ms="3300" started-at="2020-06-25T14:12:41Z" finished-at="2020-06-25T14:12:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTOken -->
-        <test-method status="PASS" signature="test()[pri:0, instance:API_Automation.Rest_Assured.AppTest@2df3b89c]" name="test" duration-ms="5" started-at="2020-06-24T18:48:50Z" finished-at="2020-06-24T18:48:50Z">
+        <test-method status="PASS" signature="validateChangeStatus()[pri:0, instance:API_Automation.Rest_Assured.StatusChange_Test@305b7c14]" name="validateChangeStatus" duration-ms="8066" started-at="2020-06-25T14:12:44Z" description="validating status change API status code and status" finished-at="2020-06-25T14:12:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- API_Automation.Rest_Assured.AppTest -->
+        </test-method> <!-- validateChangeStatus -->
+        <test-method status="PASS" signature="validateVarianceId()[pri:1, instance:API_Automation.Rest_Assured.StatusChange_Test@305b7c14]" name="validateVarianceId" duration-ms="5122" started-at="2020-06-25T14:12:52Z" description="Validate status change in DB" finished-at="2020-06-25T14:12:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateVarianceId -->
+        <test-method status="PASS" signature="validateStatusResponseTime()[pri:2, instance:API_Automation.Rest_Assured.StatusChange_Test@305b7c14]" name="validateStatusResponseTime" duration-ms="3" started-at="2020-06-25T14:12:57Z" description="Validate status API response time" finished-at="2020-06-25T14:12:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusResponseTime -->
+      </class> <!-- API_Automation.Rest_Assured.StatusChange_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

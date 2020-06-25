@@ -10,11 +10,14 @@ import org.apache.logging.log4j.Logger;
 import io.restassured.response.Response;
 
 public class GetProfile extends BaseTest {
+	Response response;
+	ResultSet result;
+
 	private static Logger log = LogManager.getLogger(GetProfile.class.getName());
 
 	public Response getProfileAPI() {
-		Response response = given().header("Content-Type", "application/json")
-				.header("Authorization", "Bearer " + accesstoken).when().get(prop_reader.getProperty("profile"));
+		response = given().header("Content-Type", "application/json").header("Authorization", "Bearer " + accesstoken)
+				.when().get(prop_reader.getProperty("profile"));
 		log.info("Calling profile API");
 		return response;
 	}
@@ -22,7 +25,7 @@ public class GetProfile extends BaseTest {
 	public ResultSet getProfileDB() {
 		String query = " SELECT * FROM user u join user_has_role uhr on (u.id=uhr.user_id) join role r on(r.id=uhr.role_id) where email='"
 				+ prop_reader.getProperty("username") + "';";
-		ResultSet result = db.connectdb(query);
+		result = db.connectdb(query);
 		return result;
 	}
 

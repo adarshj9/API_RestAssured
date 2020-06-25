@@ -24,10 +24,13 @@ public class GetUsers extends BaseTest {
 	private static Logger log = LogManager.getLogger(GetUsers.class.getName());
 
 	public Response getUsersAPI() {
+		Response response;
 
 		log.info("Making call to GetUSers API");
-		return given().header("Content-Type", "application/json").header("Authorization", "Bearer " + accesstoken)
+		response = given().header("Content-Type", "application/json").header("Authorization", "Bearer " + accesstoken)
 				.when().get(prop_reader.getProperty("users"));
+
+		return response;
 
 		// System.out.println(response.asString());
 
@@ -44,7 +47,7 @@ public class GetUsers extends BaseTest {
 			ex.createCSV("get_users", map_data.get(0));
 			for (Map map : map_data) {
 				ex.setRows(map);
-				
+
 			}
 			ex.flushData();
 

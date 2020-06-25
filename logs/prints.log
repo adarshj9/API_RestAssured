@@ -1,1 +1,4 @@
-19:22:18.347 [main] INFO  API_Automation.Rest_Assured.GetUSers_Test - Execution GetUSers_Test Completed
+14:13:47.983 [main] INFO  com.utility.ExcelHandler - Saving data to CSV
+14:13:47.998 [main] INFO  com.utility.ExcelHandler - Creating a CSV file with name get_users
+14:13:48.009 [main] INFO  com.utility.PropertyFileReader - Reading property timeout
+14:13:48.009 [main] INFO  API_Automation.Rest_Assured.GetUSers_Test - Execution GetUSers_Test Completed

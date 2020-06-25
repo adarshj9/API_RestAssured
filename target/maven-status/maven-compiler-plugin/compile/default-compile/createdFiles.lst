@@ -1,6 +1,7 @@
 API_Automation\Rest_Assured\GetProfile.class
 API_Automation\Rest_Assured\App.class
 API_Automation\Rest_Assured\GetGroups.class
+com\utility\JSONHandler.class
 com\utility\DataBaseHelper.class
 com\utility\ExcelHandler.class
 com\utility\PropertyFileReader.class

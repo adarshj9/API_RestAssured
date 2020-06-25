@@ -1,0 +1,6 @@
+14:13:45.525 [main] INFO  com.utility.PropertyFileReader - Reading property timeout
+14:13:45.530 [main] INFO  API_Automation.Rest_Assured.GetGroups_Test - Exeuction of GetGroups_Test completed
+14:13:45.537 [main] INFO  com.utility.PropertyFileReader - Reading property timeout
+14:13:45.541 [main] INFO  API_Automation.Rest_Assured.GetUSers_Test - Inside GetUSers_Test
+14:13:45.542 [main] INFO  API_Automation.Rest_Assured.GetUsers - Making call to GetUSers API
+14:13:45.546 [main] INFO  com.utility.PropertyFileReader - Reading property users
